@@ -1,0 +1,67 @@
+.formulario-nuevo {
+    padding: 3%;
+    background-color: var(--background-black-2);
+}
+
+.formulario-nuevo h2 {
+    text-align: center;
+    color: var(--background-white);
+    padding-bottom: 20px;
+}
+
+.botones {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.botones-add {
+    display: flex;
+    gap: 30px;
+}
+
+.tabla-categorias {
+    width: 100%;
+    color:  var(--background-white);
+    font-size: 14px;
+    align-items: center;
+    border: 2px solid var(--background-black);
+}
+
+.tabla-cabecera {
+    font-size: 15px;
+    font-weight: bold;
+    border: 2px solid var(--background-black);
+    margin: 10px;
+    text-align: center;
+}
+
+.tabla-categorias tr, td {
+    border: 2px solid var(--background-black);
+    padding: 5px;
+}
+
+.formulario-nuevo table {
+    margin-top: 3.5%;
+    margin-bottom: 5%;
+}
+
+.button-edit, .button-delete {
+    background-color: transparent;
+    color: var(--background-white);
+    width: 100%;
+    cursor: pointer;
+}
+
+.button-edit:hover {
+    transition: 0.5s;
+    text-decoration: underline;
+    color: var(--background-contorno);
+}
+
+.button-delete:hover {
+    transition: 0.5s;
+
+    text-decoration:underline;
+    color: red;
+}

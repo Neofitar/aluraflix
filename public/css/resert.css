@@ -57,7 +57,11 @@ a {
 
 :root {
 	--background-contorno:#6BD1FF;
+	--background-azul-oscuro:#2A7AE4;
 	--background-black:#000;
+	--background-black-2:#171818;
 	--background-white:#FFF;
 	--background-gray:#F5F5F5;
+	--background-gray-oscuro:#53585D;
+
 }
