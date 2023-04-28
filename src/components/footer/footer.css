@@ -1,0 +1,9 @@
+.footer-elements {
+    background-color: var(--background-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    border-top: 3px solid var(--background-contorno);
+}
+

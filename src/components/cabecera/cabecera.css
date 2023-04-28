@@ -1,0 +1,17 @@
+header {
+    background-color: var(--background-black);
+    border-bottom: 3px solid var(--background-contorno);
+}
+
+.cabecera_elementos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 4%;
+}
+
+.logo {
+    height: 40px;
+    width: 168px;
+}
+
