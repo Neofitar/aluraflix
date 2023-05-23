@@ -1,0 +1,23 @@
+.grupo {
+    width: 100%;
+    background-color: var(--background-black);
+    color: var(--background-white);
+    padding: 32px;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+.grupo-detalles {
+    padding: 2%;
+}
+
+.grupo h3 {
+    background-color: var(--background-contorno);
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 25px;
+    display: inline-block;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 10px 20px;
+}

@@ -1,17 +1,34 @@
+import { useState } from 'react';
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import Cabecera from './components/cabecera';
 import Banner from './components/banner';
 import Footer from './components/footer';
-import NuevaCategoria from './components/formNuevaCategoria';
+import NuevoVideo from './components/formNuevoVideo'
+import Grupo from './components/grupo';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <Cabecera/>
-    <Banner/>
-    <NuevaCategoria/>
-    <Footer/>
-  </React.StrictMode>
-);
+
+
+
+const App = () => {
+  const [mostrarFormulario, actualizarmostrar] = useState(false);
+
+  const cambiarMostrar = () => {
+    actualizarmostrar(!mostrarFormulario);
+  };
+
+  return (
+    <React.StrictMode>
+      <Cabecera cambiarMostrar={cambiarMostrar} />
+      {mostrarFormulario === true ? <NuevoVideo /> : null }
+      <Banner />
+      <Grupo />
+      <Grupo />
+      <Grupo />
+      <Footer />
+    </React.StrictMode>
+  );
+};
+
+ReactDOM.render(<App />, document.getElementById('root'));
 

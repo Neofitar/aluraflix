@@ -36,10 +36,15 @@
     text-align: center;
 }
 
-.tabla-categorias tr, td {
-    border: 2px solid var(--background-black);
+.tabla-categorias tr {
+    border: 3px solid var(--background-azul-oscuro);
+}
+
+.tabla-categorias td {
+    border-left: 2px solid var(--background-black);
     padding: 5px;
 }
+
 
 .formulario-nuevo table {
     margin-top: 3.5%;
