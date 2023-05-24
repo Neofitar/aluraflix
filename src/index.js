@@ -58,6 +58,10 @@ const App = () => {
   }
 ];
 
+//Crear vídeo
+const crearVideo = (colaborador) => {
+  console.log ("Nuevo vídeo",colaborador)
+}
 
 
 
@@ -65,12 +69,13 @@ const App = () => {
   return (
     <React.StrictMode>
       <Cabecera cambiarMostrar={cambiarMostrar} />
-      {mostrarFormulario === true ? <NuevoVideo categoria={grupos} />: null }
+      {mostrarFormulario === true ? <NuevoVideo categoria={grupos}
+      />: null }
       <Banner />
       {
         grupos.map((grupos) => <Grupo datos={grupos} key={grupos}/>)
       }
-      <NuevaCategoria/>
+      <NuevaCategoria crearVideo = {crearVideo}/>
       <Footer />
     </React.StrictMode>
   );

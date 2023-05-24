@@ -20,3 +20,12 @@
     border-radius: 5px;
     padding: 10px 20px;
 }
+
+.grupo-videos {
+    padding: 2%;
+    display: block;
+}
+
+.slick-slide {
+    margin: 0 auto;
+  }

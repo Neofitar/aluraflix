@@ -3,7 +3,7 @@ import CampoInput from "../campo-inputs"
 import CampoTextarea from "../campo-textarea"
 import BotonAzul from "../boton-azul"
 import BotonBlanco from "../boton-blanco"
-import Categorias from "../ListaColores"
+import Categorias from "../categorias"
 
 const NuevoVideo = (props) => {
 

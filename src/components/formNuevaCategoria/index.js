@@ -3,12 +3,25 @@ import CampoInput from "../campo-inputs"
 import CampoTextarea from "../campo-textarea"
 import BotonAzul from "../boton-azul"
 import BotonBlanco from "../boton-blanco"
-import ListaColores from "../ListaColores"
+import { useState } from "react"
 
-const NuevaCategoria = () => {
+const NuevaCategoria = (props) => {
+
+    const [nombre, actualizarNombre] = useState ("")
+    const [descripcion, actualizarDescripción] = useState("")
+    const [color, actualizarColor] = useState("")
+    const [codSeguridad, codSeguridadActualizar] = useState("")
 
     const manejarEnvio = (evento) => {
         evento.preventDefault()
+        console.log ("Manejar envío")
+        let datosAEnviar = {
+            nombre,
+            descripcion,
+            color,
+            codSeguridad
+        }
+        props.crearVideo(datosAEnviar)
     }
 
 
