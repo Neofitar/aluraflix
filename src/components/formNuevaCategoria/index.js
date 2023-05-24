@@ -18,7 +18,7 @@ const NuevaCategoria = () => {
         <form onSubmit={manejarEnvio}>
             <CampoInput title="Nombre:" required></CampoInput>
             <CampoTextarea title="Descripción:" required></CampoTextarea>
-            <ListaColores title="Color:" required></ListaColores>
+            <CampoInput title="Color:" type="color" required></CampoInput>
             <CampoInput title="Código de seguridad:" required></CampoInput>
             <div className="botones">
                 <div className="botones-add">
@@ -45,7 +45,7 @@ const NuevaCategoria = () => {
                 </td>
             </tr>
         </table>
-        
+
     </section>
 }
 

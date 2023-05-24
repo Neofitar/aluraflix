@@ -1,10 +1,10 @@
 import "./grupo.css"
 
-const Grupo = () => {
+const Grupo = (props) => {
     return <section className="grupo">
         <div className="grupo-detalles">
-        <h3>Back End</h3>
-        <p>Formación Back End de Alura Latam</p>
+        <h3 style={{backgroundColor:props.datos.color}}>{props.datos.titulo}</h3>
+        <p>Formación {props.datos.titulo} de Alura Latam</p>
         </div>
         <div className="grupo-videos">
         </div>

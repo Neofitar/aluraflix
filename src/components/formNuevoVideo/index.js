@@ -3,6 +3,7 @@ import CampoInput from "../campo-inputs"
 import CampoTextarea from "../campo-textarea"
 import BotonAzul from "../boton-azul"
 import BotonBlanco from "../boton-blanco"
+import Categorias from "../ListaColores"
 
 const NuevoVideo = (props) => {
 
@@ -18,6 +19,7 @@ const NuevoVideo = (props) => {
             <CampoInput title="Link imagen del vídeo:" required></CampoInput>
             <CampoTextarea title="Descripción:" required></CampoTextarea>
             <CampoInput title="Código de seguridad:" required></CampoInput>
+            <Categorias title="Categoría:"></Categorias>
             <div className="botones">
                 <div className="botones-add">
                     <BotonAzul id="ck"title="Guardar"></BotonAzul>
