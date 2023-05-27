@@ -7,28 +7,29 @@ import { useState } from "react"
 
 const NuevaCategoria = (props) => {
 
-    const [nombre, actualizarNombre] = useState ("")
-    const [descripcion, actualizarDescripción] = useState("")
-    const [color, actualizarColor] = useState("")
-    const [codSeguridad, codSeguridadActualizar] = useState("")
+    const [categoria, setCategoria] = useState({
+        nombre: '',
+        descripcion: '',
+        color: '',
+        codigoSeguridad: '',
+    });
 
-    const manejarEnvio = (evento) => {
-        evento.preventDefault()
-        console.log ("Manejar envío")
-        let datosAEnviar = {
-            nombre,
-            descripcion,
-            color,
-            codSeguridad
-        }
-        props.crearVideo(datosAEnviar)
-    }
+    const limpiarFormulario = () => {
+        setCategoria({
+            nombre: '',
+            descripcion: '',
+            color: '',
+            codigoSeguridad: '',
+        });
+    };
+
+
 
 
 
     return <section className="formulario-nuevo">
         <h2>Nuevo categoría</h2>
-        <form onSubmit={manejarEnvio}>
+        <form onSubmit={limpiarFormulario}>
             <CampoInput title="Nombre:" required></CampoInput>
             <CampoTextarea title="Descripción:" required></CampoTextarea>
             <CampoInput title="Color:" type="color" required></CampoInput>
@@ -36,7 +37,7 @@ const NuevaCategoria = (props) => {
             <div className="botones">
                 <div className="botones-add">
                     <BotonAzul id="ck" title="Guardar"></BotonAzul>
-                    <BotonBlanco title="Limpiar"></BotonBlanco>
+                    <BotonBlanco title="Limpiar" onClick={limpiarFormulario}></BotonBlanco>
                 </div>
             </div>
         </form>

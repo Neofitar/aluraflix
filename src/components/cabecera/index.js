@@ -1,12 +1,23 @@
 import "./cabecera.css"
 import Boton from "../boton-add"
+import { useNavigate } from "react-router-dom"
 
 const Cabecera = (props) => {
 
+    const ir = useNavigate();
+
+    const irHome = () => {
+        ir ('/');
+    };
+
+    const irCrearVideo = () => {
+        ir ('/nuevoVideo')
+    };
+
     return <header className="cabecera">
         <div className="cabecera_elementos">
-            <img className="logo" src="/img/logo.png" alt="logo"></img>
-            <Boton onClick={props.cambiarMostrar} title="Nuevo vídeo" ></Boton>
+            <img onClick={irHome} className="logo" src="/img/logo.png" alt="logo"></img>
+            <Boton onClick={irCrearVideo} title="Nuevo vídeo" ></Boton>
         </div>
     </header>
 
