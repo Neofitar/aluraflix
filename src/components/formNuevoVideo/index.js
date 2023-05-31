@@ -20,7 +20,7 @@ const NuevoVideo = (props) => {
     });
 
     const limpiarFormulario = () => {
-        setVideo ({
+        setVideo({
             titulo: '',
             link: '',
             imagen: '',
@@ -28,27 +28,76 @@ const NuevoVideo = (props) => {
             codigoSeguridad: '',
             categoria: '',
         });
-    }
+    };
 
     const navigate = useNavigate();
 
     const irNuevaCategoria = () => {
-      navigate('/nuevaCategoria');
+        navigate('/nuevaCategoria');
+    };
+
+    const handleChange = (event, campo) => {
+        const { value } = event.target;
+        setVideo((prevVideo) => ({
+            ...prevVideo,
+            [campo]: value,
+        }));
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        props.registrarVideo(video);
+        limpiarFormulario();
     };
 
     return (
         <section className="formulario-nuevo">
             <h2>Nuevo video</h2>
-            <form onSubmit={limpiarFormulario}>
-                <CampoInput title="Título:" required></CampoInput>
-                <CampoInput title="Link del vídeo:" required></CampoInput>
-                <CampoInput title="Link imagen del vídeo:" required></CampoInput>
-                <CampoTextarea title="Descripción:" required></CampoTextarea>
-                <CampoInput title="Código de seguridad:" required></CampoInput>
-                <Categorias title="Categoría:"></Categorias>
+            <form onSubmit={handleSubmit}>
+                <CampoInput
+                    title="Título:"
+                    valor={video.titulo}
+                    actualizarValor={(event) => handleChange(event, "titulo")}
+                    required
+                />
+
+                <CampoInput
+                    title="Link del vídeo:"
+                    valor={video.link}
+                    actualizarValor={(event) => handleChange(event, "link")}
+                    required
+                />
+
+                <CampoInput
+                    title="Link imagen del vídeo:"
+                    valor={video.imagen}
+                    actualizarValor={(event) => handleChange(event, "imagen")}
+                    required
+                />
+
+                <CampoTextarea
+                    title="Descripción:"
+                    valor={video.descripcion}
+                    actualizarValor={(event) => handleChange(event, "descripcion")}
+                    required
+                />
+
+                <CampoInput
+                    title="Código de seguridad:"
+                    valor={video.codigoSeguridad}
+                    actualizarValor={(event) => handleChange(event, "codigoSeguridad")}
+                    required
+                />
+
+                <Categorias
+                    title="Categoría:"
+                    valor={video.categoria}
+                    actualizarValor={(event, value) => handleChange(event, "categoria", value)}
+                />
+
                 <div className="botones">
                     <div className="botones-add">
-                        <BotonAzul id="ck" title="Guardar"></BotonAzul>
+                        <BotonAzul id="ck" type="submit" title="Guardar"></BotonAzul>
                         <BotonBlanco title="Limpiar" onClick={limpiarFormulario}></BotonBlanco>
                     </div>
                     <BotonAzul title="Nueva categoría" onClick={irNuevaCategoria} />
@@ -58,4 +107,5 @@ const NuevoVideo = (props) => {
     );
 }
 
-export default (NuevoVideo);
+export default NuevoVideo;
+

@@ -5,9 +5,12 @@ const VideoImg = (props) => {
         <img
             src={props.src}
             alt={props.alt}
-            style={{ borderColor: "blue" }}
+            style={{ borderColor:props.color }}
             href={props.href}
+            key={props.codigoSeguridad}
+            categoria={props.categoria}
         ></img>
+        <p>{props.title}</p>
     </div>
 }
 

@@ -24,6 +24,7 @@
 .grupo-videos {
     padding: 2%;
     display: block;
+    flex-wrap: wrap;
 }
 
 .slick-slide {

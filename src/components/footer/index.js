@@ -11,7 +11,7 @@ const Footer = () => {
     };
 
     return <footer className="footer-elements">
-        <img className="logo" src="/img/logo.png" alt="logo" onClick={irHome}></img>
+        <img className="logo" src="/img/logo192.png" alt="logo" onClick={irHome}></img>
     </footer>
 }
 

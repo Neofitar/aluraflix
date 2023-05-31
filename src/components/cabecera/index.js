@@ -16,7 +16,7 @@ const Cabecera = (props) => {
 
     return <header className="cabecera">
         <div className="cabecera_elementos">
-            <img onClick={irHome} className="logo" src="/img/logo.png" alt="logo"></img>
+            <img onClick={irHome} className="logo" src="/img/logo192.png" alt="logo"></img>
             <Boton onClick={irCrearVideo} title="Nuevo vídeo" ></Boton>
         </div>
     </header>

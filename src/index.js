@@ -7,29 +7,28 @@ import Footer from './components/footer';
 import NuevoVideo from './components/formNuevoVideo';
 import NuevaCategoria from './components/formNuevaCategoria';
 import Home from './components/Home/Home';
+import grupos from './db/categoriasDB';
 
 const App = () => {
 
-  // Lista de grupos
-  const grupos = [
-    { titulo: 'Programación', color: '#6BD1FF' },
-    { titulo: 'Back End', color: '#00C86F' },
-    { titulo: 'Front End', color: '#FFBA05' },
-    { titulo: 'Móvil', color: '#DC6EBE' },
-    { titulo: 'Análisis de datos', color: '#9CD33B' },
-    { titulo: 'Data Science', color: '#6B5BE2' },
-    { titulo: 'Devops', color: '#FF8C2A' },
-    { titulo: 'Innovación y Gestión', color: '#9CD33B' },
-    { titulo: 'UX y Diseño', color: '#6BD1FF' },
-  ];
+  const [nuevosVideos, setNuevosVideos] = useState([]);
+
+  //Registrar nuevos videos
+
+  const registrarVideo = (NuevoVideo) => {
+    console.log("Nuevo video", NuevoVideo)
+    //spread operator
+    setNuevosVideos([...nuevosVideos, NuevoVideo])
+  }
+
 
   
   return (
     <Router>
       <Cabecera />
       <Routes>
-        <Route path='/' element={<Home grupos={grupos} />} />
-        <Route path='/nuevoVideo' element={<NuevoVideo categoria={grupos} />}/>
+        <Route path='/' element={<Home grupos={grupos} nuevosVideos={nuevosVideos} />} />
+        <Route path='/nuevoVideo' element={<NuevoVideo categoria={grupos} registrarVideo={registrarVideo}/>}/>
         <Route path='/nuevaCategoria' element={<NuevaCategoria />} />
       </Routes>
       <Footer />
