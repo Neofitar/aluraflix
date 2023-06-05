@@ -72,8 +72,8 @@ const NuevaCategoria = (props) => {
         </div>
       </form>
       <table className="tabla-categorias">
-        <thead>
-          <tr className="tabla-cabecera">
+        <thead className="tabla-cabecera">
+          <tr>
             <th className="td-titulo">Nombre</th>
             <th className="td-descripcion">Descripción</th>
             <th className="td-btn">Color</th>
@@ -82,12 +82,12 @@ const NuevaCategoria = (props) => {
           </tr>
         </thead>
         <tbody>
-          {props.grupos && props.grupos.map((categoria) => (
+          {props.grupos && props.grupos.map((categorias) => (
             <TablaCategorias
-              title={categoria.titulo}
-              descripcion={categoria.descripcion}
-              color={categoria.color}
-              key={categoria.id}
+              title={categorias.titulo}
+              descripcion={categorias.descripcion}
+              color={categorias.color}
+              key={categorias.id}
             />
           ))}
         </tbody>

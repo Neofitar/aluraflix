@@ -22,14 +22,15 @@ const App = () => {
   }
 
 
-  
+
   return (
     <Router>
       <Cabecera />
       <Routes>
         <Route path='/' element={<Home grupos={grupos} nuevosVideos={nuevosVideos} />} />
-        <Route path='/nuevoVideo' element={<NuevoVideo categoria={grupos} registrarVideo={registrarVideo}/>}/>
-        <Route path='/nuevaCategoria' element={<NuevaCategoria />} />
+        <Route path='/nuevoVideo' element={<NuevoVideo categoria={grupos} registrarVideo={registrarVideo} />} />
+        <Route path="/nuevaCategoria" element={<NuevaCategoria grupos={grupos} />}
+        />
       </Routes>
       <Footer />
     </Router>

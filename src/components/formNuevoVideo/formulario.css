@@ -39,7 +39,10 @@
 
 .tabla-categorias tr {
     border: 3px solid var(--background-azul-oscuro);
+}
 
+thead {
+    padding: 30px;
 }
 
 .tabla-categorias td {
