@@ -1,9 +1,4 @@
-In the project directory, you can run:
+# Challenge ONE | React - AluraFlix
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### ¡Bienvenido al proyecto de AluraFlix!
+#### ⭐ Visita la página del proyecto [¡Haciendo clic aquí!]([https://aluraflix-beta-amber.vercel.app/](https://neofitar.github.io/Alura-ecomerce/)) 📃
