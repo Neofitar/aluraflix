@@ -23,31 +23,30 @@
 
 .tabla-categorias {
     width: 100%;
-    color:  var(--background-white);
     font-size: 14px;
-    align-items: center;
-    border: 2px solid var(--background-black);
 }
 
-.tabla-cabecera {
-    font-size: 15px;
-    font-weight: bold;
-    border: 2px solid var(--background-black);
-    margin: 10px;
-    text-align: center;
+
+.tabla-categorias, thead, .tabla-cabecera th, tbody {
+    border: 4px solid var(--background-azul-oscuro);
 }
 
-.tabla-categorias tr {
-    border: 3px solid var(--background-azul-oscuro);
+.td_body th {
+    border: 3px solid var(--background-black);
 }
 
-thead {
-    padding: 30px;
-}
+tbody {
+    border: var(--background-azul-oscuro) 3px solid;
+  }
 
-.tabla-categorias td {
-    border-left: 2px solid var(--background-black);
+
+
+.tabla-categorias thead, th {
+    color: #fff;
     padding: 10px;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
 }
 
 .td-titulo {
@@ -55,7 +54,8 @@ thead {
 }
 
 .td-descripcion {
-    width: 60%;
+    width: 65%;
+    text-align: left;
 }
 
 .td-btn {
@@ -63,10 +63,8 @@ thead {
     text-align: center;
 }
 
-
-.formulario-nuevo table {
-    margin-top: 3.5%;
-    margin-bottom: 5%;
+.tabla-cabecera th {
+    font-weight: bold;
 }
 
 .button-edit, .button-delete {
@@ -90,5 +88,5 @@ thead {
 }
 
 form {
-    margin-bottom: 5%;
+    margin: 40px 0;
 }

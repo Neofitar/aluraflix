@@ -74,11 +74,11 @@ const NuevaCategoria = (props) => {
       <table className="tabla-categorias">
         <thead className="tabla-cabecera">
           <tr>
-            <th className="td-titulo">Nombre</th>
-            <th className="td-descripcion">Descripción</th>
-            <th className="td-btn">Color</th>
-            <th className="td-btn">Editar</th>
-            <th className="td-btn">Remover</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Color</th>
+            <th>Editar</th>
+            <th>Remover</th>
           </tr>
         </thead>
         <tbody>
