@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../grupo/grupo.css';
 import VideoImg from '../video';
 import Slider from 'react-slick';
@@ -6,18 +6,34 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const Grupo = (props) => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const PantallaCelular = windowWidth <= 700;
+  const PantallaTablet = windowWidth <= 1200;
+  const PantallaPC = windowWidth <= 1364;
+
   const settings = {
     dots: true,
-    infinite: false,
+    infinite: props.nuevosVideos.length > 1,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
+    slidesToShow: PantallaCelular ? 1 : PantallaTablet ? 2 : PantallaPC ? 3 : 3,
+    slidesToScroll: 2,
     vertical: false,
     centerMode: true,
-    centerPadding: '45px'
+    centerPadding: '15px'
   };
-
-  console.log(props.nuevosVideos.length > 0);
 
   return (
     props.nuevosVideos.length > 0 && (
@@ -33,6 +49,7 @@ const Grupo = (props) => {
                 src={video.imagen}
                 alt={video.titulo}
                 title={video.titulo}
+                href={video.link}
                 key={video.codigoSeguridad}
                 categoria={video.categoria}
                 color={props.datos.color}

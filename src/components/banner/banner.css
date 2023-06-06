@@ -1,18 +1,42 @@
 .banner-elementos {
-    padding: 10% 4% 3% 4%;
+    width: 100%;
+    padding: 4%;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    box-sizing: border-box;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.banner-elementos::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: url(../../../public/img/player.png);
     background-size: cover;
     background-repeat: no-repeat;
-    display: flex;
-    align-items: flex-end;
+    background-color: black;
+    opacity: 2;
+    filter: blur(1px);
+    z-index: -1;
 }
 
+
 .banner-elementos-texto {
+    width: 100%;
     color: var(--background-white);
     display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: flex-start;
     flex-direction: column;
-    margin-bottom: 5%;
-    margin-right: 5%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+
 }
 
 .banner-titulo-principal {
@@ -21,9 +45,29 @@
     background-color: var(--background-contorno);
     border-radius: 5px;
     text-align: center;
-    margin-right: 600px;
+    box-sizing: border-box;
 }
 
 .banner-titulo-secundario {
     font-size: 20px;
+}
+
+
+@media screen and (max-width: 800px) {
+
+    .banner-elementos img {
+        display: none;
+    }
+
+    .banner-elementos p {
+        display: none;
+    }
+
+    .banner-elementos-texto {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        text-align: center;
+        align-items: center;
+    }
 }

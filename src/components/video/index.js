@@ -1,17 +1,21 @@
 import "./video.css"
 
 const VideoImg = (props) => {
-    return <div className="video">
-        <img
+    return (
+      <div className="video">
+        <a href={props.href} target="_blank" rel="noopener noreferrer">
+          <img
             src={props.src}
             alt={props.alt}
-            style={{ borderColor:props.color }}
-            href={props.href}
+            style={{ borderColor: props.color }}
             key={props.codigoSeguridad}
             categoria={props.categoria}
-        ></img>
+          ></img>
+        </a>
         <p>{props.title}</p>
-    </div>
-}
+      </div>
+    );
+  };
+  
 
 export default VideoImg
