@@ -32,6 +32,7 @@ const NuevaCategoria = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(categoria);
+    props.registrarCategoria(categoria);
     limpiarFormulario();
   };
 
@@ -82,7 +83,7 @@ const NuevaCategoria = (props) => {
           </tr>
         </thead>
         <tbody>
-          {props.grupos && props.grupos.map((categorias) => (
+          {props.nuevaCate && props.nuevaCate.map((categorias) => (
             <TablaCategorias
               title={categorias.titulo}
               descripcion={categorias.descripcion}

@@ -1,11 +1,10 @@
 import React from 'react';
 import '../campo-inputs/campo.css';
-import grupos from '../../db/categoriasDB';
 
 const Categorias = (props) => {
   const handleChange = (event) => {
     const value = event.target.value;
-    props.actualizarValor(event, value);
+    props.actualizarValor(event, 'categoria', value);
   };
 
   return (
@@ -14,7 +13,7 @@ const Categorias = (props) => {
       
       <select value={props.valor} onChange={handleChange}>
         <option value="" disabled defaultValue="" hidden>Seleccionar categoría</option>
-        {grupos.map((grupo, index) => (
+        {props.grupos.map((grupo, index) => (
           <option
             key={index}
             style={{ backgroundColor: grupo.color }}

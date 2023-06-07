@@ -1,10 +1,17 @@
+body {
+    background-color: var(--background-black);
+}
+
 .grupo {
     width: 100%;
     background-color: var(--background-black);
     color: var(--background-white);
-    padding: 32px;
+    padding: 1% 5%;
     box-sizing: border-box;
     font-size: 18px;
+    justify-content: center;
+    margin-bottom: 30px;
+
 }
 
 .grupo-detalles {
@@ -22,12 +29,12 @@
 }
 
 .grupo-videos {
-    padding: 2%;
+    box-sizing: border-box;
     display: block;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .slick-slide {
     margin: 0 auto;
-  }
-
+}

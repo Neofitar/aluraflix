@@ -7,9 +7,7 @@ import BotonBlanco from "../boton-blanco";
 import Categorias from "../categorias";
 import { useNavigate } from 'react-router-dom';
 
-
 const NuevoVideo = (props) => {
-
     const [video, setVideo] = useState({
         titulo: '',
         link: '',
@@ -18,6 +16,7 @@ const NuevoVideo = (props) => {
         codigoSeguridad: '',
         categoria: '',
     });
+
 
     const limpiarFormulario = () => {
         setVideo({
@@ -60,41 +59,36 @@ const NuevoVideo = (props) => {
                     actualizarValor={(event) => handleChange(event, "titulo")}
                     required
                 />
-
                 <CampoInput
                     title="Link del vídeo:"
                     valor={video.link}
                     actualizarValor={(event) => handleChange(event, "link")}
                     required
                 />
-
                 <CampoInput
                     title="Link imagen del vídeo:"
                     valor={video.imagen}
                     actualizarValor={(event) => handleChange(event, "imagen")}
                     required
                 />
-
                 <CampoTextarea
                     title="Descripción:"
                     valor={video.descripcion}
                     actualizarValor={(event) => handleChange(event, "descripcion")}
                     required
                 />
-
                 <CampoInput
                     title="Código de seguridad:"
                     valor={video.codigoSeguridad}
                     actualizarValor={(event) => handleChange(event, "codigoSeguridad")}
                     required
                 />
-
                 <Categorias
                     title="Categoría:"
                     valor={video.categoria}
-                    actualizarValor={(event, value) => handleChange(event, "categoria", value)}
+                    actualizarValor={(event, campo, value) => handleChange(event, campo, value)}
+                    grupos={props.nuevaCate}
                 />
-
                 <div className="botones">
                     <div className="botones-add">
                         <BotonAzul id="ck" type="submit" title="Guardar"></BotonAzul>
@@ -107,5 +101,6 @@ const NuevoVideo = (props) => {
     );
 }
 
-export default NuevoVideo;
+export default NuevoVideo
+
 

@@ -20,13 +20,13 @@ const Grupo = (props) => {
     };
   }, []);
 
-  const PantallaCelular = windowWidth <= 700;
+  const PantallaCelular = windowWidth <= 750;
   const PantallaTablet = windowWidth <= 1200;
   const PantallaPC = windowWidth <= 1364;
 
   const settings = {
     dots: true,
-    infinite: props.nuevosVideos.length > 1,
+    infinite: props.nuevosVideos.length > 2,
     speed: 500,
     slidesToShow: PantallaCelular ? 1 : PantallaTablet ? 2 : PantallaPC ? 3 : 3,
     slidesToScroll: 2,
