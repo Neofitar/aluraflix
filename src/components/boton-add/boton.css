@@ -1,10 +1,15 @@
 .button-add {
     background-color:  var(--background-black);;
-    color: var(--background-gray);
-    border: 1px solid  var(--background-gray);
+    color: var(--background-white);
+    border: 1px solid  var(--background-white);
     height: 40px;
     width: 150px;
     border-radius: 4px;
     font-size: 14px;
     cursor: pointer;
+}
+
+.button-add:hover {
+    transition: 1s;
+    background-color: var(--background-azul-oscuro);
 }

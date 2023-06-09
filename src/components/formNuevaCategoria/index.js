@@ -6,6 +6,7 @@ import BotonAzul from "../boton-azul";
 import BotonBlanco from "../boton-blanco";
 import { useState } from "react";
 import TablaCategorias from "../tablaCategorias";
+import { useNavigate } from "react-router-dom";
 
 const NuevaCategoria = (props) => {
 
@@ -25,6 +26,13 @@ const NuevaCategoria = (props) => {
     });
   };
 
+  const navigate = useNavigate();
+
+  const irNuevoVideo = () => {
+    navigate('/nuevoVideo')
+}
+
+
   const handleChange = (event, campo) => {
     setCategoria({ ...categoria, [campo]: event.target.value });
   };
@@ -34,6 +42,8 @@ const NuevaCategoria = (props) => {
     console.log(categoria);
     props.registrarCategoria(categoria);
     limpiarFormulario();
+    irNuevoVideo();
+    
   };
 
   return (

@@ -2,14 +2,14 @@ import React from 'react';
 import Banner from '../banner';
 import Grupo from '../grupo/index';
 
-const Home = ({ nuevaCate, nuevosVideos }) => {
+const Home = ({ nuevaCate, nuevosVideos, ultimoVideo }) => {
   if (!nuevaCate || !Array.isArray(nuevaCate)) {
     return null; // O muestra un mensaje de error o un estado de carga, según corresponda
   }
 
   return (
     <div>
-      <Banner />
+      <Banner ultimoVideo={ultimoVideo} categorias={nuevaCate}/>
       {nuevaCate.map((categoria) => (
         <Grupo
           datos={categoria}

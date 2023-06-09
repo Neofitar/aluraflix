@@ -17,7 +17,8 @@ const App = () => {
       descripcion: "Vídeo de programación.",
       imagen: "https://i.ytimg.com/vi/bn46ZB8yutI/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCnJDA_K5IpCZ5JAK0hYVt5BX7gww",
       link: "https://youtu.be/bn46ZB8yutI",
-      titulo: "¿Dónde aprender programación?"
+      titulo: "¿Dónde aprender programación?",
+      fondo: "https://i.ytimg.com/vi/D0gIkkrQ_AQ/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB1oBICDtdQZVa7DCgoMTL2wMOWlg"
     },
     {
       categoria: "Front End",
@@ -25,7 +26,8 @@ const App = () => {
       descripcion: "Vídeo Front End.",
       imagen: "https://i.ytimg.com/vi/R9uaBxgCkyA/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBZ9iKhFiCiQs4M1NPR7mIBUXh21g",
       link: "https://youtu.be/rpvrLaBQwgg",
-      titulo: "Equipo Front End"
+      titulo: "Equipo Front End",
+      fondo: "https://i.ytimg.com/vi/D0gIkkrQ_AQ/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB1oBICDtdQZVa7DCgoMTL2wMOWlg"
     },
     {
       categoria: "Front End",
@@ -33,7 +35,9 @@ const App = () => {
       descripcion: "Vídeo Front End.",
       imagen: "https://i.ytimg.com/vi/UuAX5azcvDQ/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLANQCnxWMWjK09Z80LzZEn4oj0PGQ",
       link: "https://youtu.be/UuAX5azcvDQ",
-      titulo: "¿Cómo un desarrollador utiliza el Figma?"
+      titulo: "¿Cómo un desarrollador utiliza el Figma?",
+      fondo: "https://i.ytimg.com/vi/D0gIkkrQ_AQ/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB1oBICDtdQZVa7DCgoMTL2wMOWlg"
+
     },
     {
       categoria: "Front End",
@@ -41,7 +45,9 @@ const App = () => {
       descripcion: "Vídeo Front End.",
       imagen: "https://i.ytimg.com/vi/fpth65ts3cw/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDvsZSL2HZddDf0Jo0druhP21HJ9Q",
       link: "https://youtu.be/fpth65ts3cw",
-      titulo: "Guia de carreira Front-end"
+      titulo: "Guia de carreira Front-end",
+      fondo: "https://i.ytimg.com/vi/D0gIkkrQ_AQ/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB1oBICDtdQZVa7DCgoMTL2wMOWlg"
+
     },
     {
       categoria: "Front End",
@@ -49,12 +55,19 @@ const App = () => {
       descripcion: "Vídeo Front End.",
       imagen: "https://i.ytimg.com/vi/MxlxFhzGRV8/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC9MdMB3da1gzziUY2z-th2VB6vmg",
       link: "https://youtu.be/MxlxFhzGRV8",
-      titulo: "Cómo aplicar Dark Mode en tu proyecto"
+      titulo: "Cómo aplicar Dark Mode en tu proyecto",
+      fondo: "https://i.ytimg.com/vi/D0gIkkrQ_AQ/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB1oBICDtdQZVa7DCgoMTL2wMOWlg"
     }
 
 
   ]);
 
+
+  //Seleccionar último vídeo agregado para banner
+  let ultimoVideo = null;
+  if (nuevosVideos.length > 0) {
+    ultimoVideo = nuevosVideos[nuevosVideos.length - 1];
+  }
   //Registrar nuevos videos
 
   const registrarVideo = (NuevoVideo) => {
@@ -137,7 +150,7 @@ const App = () => {
     <Router>
       <Cabecera />
       <Routes>
-        <Route path='/' element={<Home nuevaCate={nuevaCate} nuevosVideos={nuevosVideos} />} />
+        <Route path='/' element={<Home nuevaCate={nuevaCate} nuevosVideos={nuevosVideos} ultimoVideo={ultimoVideo} />} />
         <Route path='/nuevoVideo' element={<NuevoVideo nuevaCate={nuevaCate} registrarVideo={registrarVideo} />} />
         <Route path="/nuevaCategoria" element={<NuevaCategoria nuevaCate={nuevaCate} registrarCategoria={registrarCategoria} />}
         />

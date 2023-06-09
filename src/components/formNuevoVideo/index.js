@@ -12,6 +12,7 @@ const NuevoVideo = (props) => {
         titulo: '',
         link: '',
         imagen: '',
+        fondo: '',
         descripcion: '',
         codigoSeguridad: '',
         categoria: '',
@@ -23,6 +24,7 @@ const NuevoVideo = (props) => {
             titulo: '',
             link: '',
             imagen: '',
+            fondo: '',
             descripcion: '',
             codigoSeguridad: '',
             categoria: '',
@@ -33,6 +35,10 @@ const NuevoVideo = (props) => {
 
     const irNuevaCategoria = () => {
         navigate('/nuevaCategoria');
+    };
+
+    const irHome = () => {
+        navigate('/');
     };
 
     const handleChange = (event, campo) => {
@@ -47,12 +53,19 @@ const NuevoVideo = (props) => {
         event.preventDefault();
         props.registrarVideo(video);
         limpiarFormulario();
+        irHome();
     };
 
     return (
         <section className="formulario-nuevo">
             <h2>Nuevo video</h2>
             <form onSubmit={handleSubmit}>
+                <CampoInput
+                    title="Código de seguridad:"
+                    valor={video.codigoSeguridad}
+                    actualizarValor={(event) => handleChange(event, "codigoSeguridad")}
+                    required
+                />
                 <CampoInput
                     title="Título:"
                     valor={video.titulo}
@@ -66,21 +79,21 @@ const NuevoVideo = (props) => {
                     required
                 />
                 <CampoInput
-                    title="Link imagen del vídeo:"
+                    title="Link portada del vídeo:"
                     valor={video.imagen}
                     actualizarValor={(event) => handleChange(event, "imagen")}
+                    required
+                />
+                <CampoInput
+                    title="Link imágenes del vídeo:"
+                    valor={video.fondo}
+                    actualizarValor={(event) => handleChange(event, "fondo")}
                     required
                 />
                 <CampoTextarea
                     title="Descripción:"
                     valor={video.descripcion}
                     actualizarValor={(event) => handleChange(event, "descripcion")}
-                    required
-                />
-                <CampoInput
-                    title="Código de seguridad:"
-                    valor={video.codigoSeguridad}
-                    actualizarValor={(event) => handleChange(event, "codigoSeguridad")}
                     required
                 />
                 <Categorias
