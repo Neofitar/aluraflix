@@ -51,8 +51,8 @@ a {
 }
 
 :root {
-	--background-contorno:#CC1100;
-	--background-azul-oscuro:#8B0000;
+	--background-contorno: #3a75e2;
+	--background-azul-oscuro:rgb(0, 12, 180);
 	--background-black:#000;
 	--background-black-2:#171818;
 	--background-white:#FFF;
