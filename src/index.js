@@ -12,25 +12,25 @@ const App = () => {
 
   const [nuevosVideos, setNuevosVideos] = useState([
     {
-      categoria: "Programación",
+      categoria: "👻| El antipodcast",
       codigoSeguridad: "001",
-      descripcion: "Vídeo de programación.",
-      imagen: "https://i.ytimg.com/vi/bn46ZB8yutI/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCnJDA_K5IpCZ5JAK0hYVt5BX7gww",
-      link: "https://youtu.be/bn46ZB8yutI",
-      titulo: "¿Dónde aprender programación?",
-      fondo: "https://i.ytimg.com/vi/D0gIkkrQ_AQ/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB1oBICDtdQZVa7DCgoMTL2wMOWlg"
+      descripcion: "La etimología de la palabra fantasma viene del griego phanein. Hoy en el antipodcast nos preguntamos ¿de dónde vienen los fantasmas y porqué están entre nosotros? No te pierdas un nuevo episodio del antipodcast.",
+      imagen: "https://i.ytimg.com/an_webp/ptvFqQ5hJuc/mqdefault_6s.webp?du=3000&sqp=CO71iaQG&rs=AOn4CLBQYgyLI9Tc09eg0ZriHwqJssaa7w",
+      link: "https://www.youtube.com/watch?v=Dj2fxw_7hdU&ab_channel=ELANTIPODCAST",
+      titulo: "¿Invocaron al demonio en la Segunda Guerra Mundial?",
+      fondo: "https://i.ytimg.com/an_webp/Dj2fxw_7hdU/mqdefault_6s.webp?du=3000&sqp=CNuFiqQG&rs=AOn4CLBzKnCnHz8sXxrIowK7SIOl-5uMag"
     },
     {
-      categoria: "Front End",
+      categoria: "👻| El antipodcast",
       codigoSeguridad: "002",
       descripcion: "Vídeo Front End.",
-      imagen: "https://i.ytimg.com/vi/R9uaBxgCkyA/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBZ9iKhFiCiQs4M1NPR7mIBUXh21g",
+      imagen: "https://i.ytimg.com/an_webp/rFMUK4OmaGw/mqdefault_6s.webp?du=3000&sqp=CIiTiqQG&rs=AOn4CLCZv6g4q6_2OBC2dxsGRi750cF0aw",
       link: "https://youtu.be/rpvrLaBQwgg",
-      titulo: "Equipo Front End",
+      titulo: "Fallos en la realidad y saltos cuánticos",
       fondo: "https://i.ytimg.com/vi/D0gIkkrQ_AQ/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB1oBICDtdQZVa7DCgoMTL2wMOWlg"
     },
     {
-      categoria: "Front End",
+      categoria: "👻| El antipodcast",
       codigoSeguridad: "003",
       descripcion: "Vídeo Front End.",
       imagen: "https://i.ytimg.com/vi/UuAX5azcvDQ/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLANQCnxWMWjK09Z80LzZEn4oj0PGQ",
@@ -40,7 +40,7 @@ const App = () => {
 
     },
     {
-      categoria: "Front End",
+      categoria: "👻| El antipodcast",
       codigoSeguridad: "004",
       descripcion: "Vídeo Front End.",
       imagen: "https://i.ytimg.com/vi/fpth65ts3cw/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDvsZSL2HZddDf0Jo0druhP21HJ9Q",
@@ -50,14 +50,14 @@ const App = () => {
 
     },
     {
-      categoria: "Front End",
-      codigoSeguridad: "005",
-      descripcion: "Vídeo Front End.",
-      imagen: "https://i.ytimg.com/vi/MxlxFhzGRV8/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC9MdMB3da1gzziUY2z-th2VB6vmg",
-      link: "https://youtu.be/MxlxFhzGRV8",
-      titulo: "Cómo aplicar Dark Mode en tu proyecto",
-      fondo: "https://i.ytimg.com/vi/D0gIkkrQ_AQ/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB1oBICDtdQZVa7DCgoMTL2wMOWlg"
-    }
+      categoria: "👻| El antipodcast",
+      codigoSeguridad: "001",
+      descripcion: "La etimología de la palabra fantasma viene del griego phanein. Hoy en el antipodcast nos preguntamos ¿de dónde vienen los fantasmas y porqué están entre nosotros? No te pierdas un nuevo episodio del antipodcast.",
+      imagen: "https://i.ytimg.com/an_webp/ptvFqQ5hJuc/mqdefault_6s.webp?du=3000&sqp=CO71iaQG&rs=AOn4CLBQYgyLI9Tc09eg0ZriHwqJssaa7w",
+      link: "https://www.youtube.com/watch?v=Dj2fxw_7hdU&ab_channel=ELANTIPODCAST",
+      titulo: "¿Invocaron al demonio en la Segunda Guerra Mundial?",
+      fondo: "https://w0.peakpx.com/wallpaper/206/226/HD-wallpaper-halloween-ghosts-ghost-halloween-artist-artwork-digital-art.jpg"
+    },
 
 
   ]);
@@ -79,8 +79,8 @@ const App = () => {
   const [nuevaCate, setNuevaCate] = useState([
     {
       id: "001",
-      titulo: "Programación",
-      color: "#6BD1FF",
+      titulo: "👻| El antipodcast",
+      color: "#660000",
       descripcion: "Todos los video que estoy usando para estudiar Programación."
     },
     {

@@ -8,7 +8,7 @@ const Banner = ({ ultimoVideo, categorias  }) => {
       backgroundColor: categoria ? categoria.color : '#2A7AE4', // Establecer el color de fondo según la categoría
     };
   return (
-    <div className="banner-elementos" style={{ backgroundImage: `url(${ultimoVideo.fondo})`, backgroundSize: 'cover'}}>
+    <div className="banner-elementos" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(${ultimoVideo.fondo})`, backgroundSize: 'cover'}}>
       <div className="banner-elementos-texto">
         <h2 className="banner-titulo-principal" style={tituloPrincipalStyle}>{ultimoVideo.categoria}</h2>
         <h3 className="banner-titulo-secundario" style={{color:'#fff'}} >{ultimoVideo.titulo}</h3>
